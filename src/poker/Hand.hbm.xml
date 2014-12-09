@@ -1,0 +1,26 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="poker.hand" table="PokerResults">
+		<meta attribute="class-description">
+			This class contains the employee detail.
+		</meta>
+		<id name="id" type="int" column="id">
+			<generator class="sequence">
+				<param name="sequence">SEQ_EMP</param>
+			</generator>
+		</id>
+		<property name="HandStrength" column="HandStrength" type="int" />
+		<property name="LoHand" column="LoHand" type="int" />
+		<property name="HiHand" column="HiHand" type="int" />
+		<property name="Kicker" column="Kicker" type="int" />
+		<property name="bScored" column="bScored" type="boolean" />
+		<property name="Flush" column="Flush" type="boolean" />
+		<property name="Straight" column= "Straight" type="boolean" />
+		<property name="Ace" column="Ace" type="boolean" />
+	</class>
+</hibernate-mapping>
